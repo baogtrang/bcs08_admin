@@ -39,6 +39,7 @@ const HomeLayout = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          paddingLeft: 200,
         }}
       >
         <span className="text-white font-medium text-2xl">
@@ -53,7 +54,12 @@ const HomeLayout = () => {
           theme="dark"
           width={200}
           style={{
-            background: colorBgContainer,
+            overflow: "auto",
+            height: "100vh",
+            position: "fixed",
+            left: 0,
+            top: 0,
+            bottom: 0,
           }}
         >
           <Menu
@@ -69,8 +75,9 @@ const HomeLayout = () => {
           />
         </Sider>
         <Layout
+          className="site-layout"
           style={{
-            padding: "0 24px 24px",
+            marginLeft: 200,
           }}
         >
           <Breadcrumb

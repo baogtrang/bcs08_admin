@@ -1,5 +1,10 @@
 import React from "react";
+import Spinner from "../../components/Spinner";
 
 export default function UserPage() {
-  return <div>UserPage</div>;
+  return (
+    <div>
+      <Spinner />
+    </div>
+  );
 }
