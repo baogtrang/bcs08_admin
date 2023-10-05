@@ -1,10 +1,7 @@
-import React from "react";
-import Spinner from "../../components/Spinner";
+import React from 'react'
 
 export default function UserPage() {
   return (
-    <div>
-      <Spinner />
-    </div>
-  );
+    <div>UserPage</div>
+  )
 }
