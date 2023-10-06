@@ -8,3 +8,4 @@ export let getListMovie = () => {
     headers: configHeaders(),
   });
 };
+
