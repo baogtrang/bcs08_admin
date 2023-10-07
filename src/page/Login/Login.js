@@ -6,15 +6,22 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setLogin } from "../../redux/userSlice";
 import { userLocalStorage } from "../../api/localService";
+
 const onFinishFailed = (errorInfo) => {
   console.log("Failed:", errorInfo);
 };
+
 const FormLogin = () => {
+  // Redux useDispatch hook to get the dispatch function
   let dispatch = useDispatch();
+  // React Router useNavigate hook to get the navigate function.
   let navigate = useNavigate();
+
   const onFinish = (values) => {
-    // gọi api
+    // makes an API request to log in
     https
+      //Make a POST request to the /QuanLyNguoiDung/DangNhap endpoint and 
+      //send the values (form data) as the request body. 
       .post("/QuanLyNguoiDung/DangNhap", values)
       .then((res) => {
         dispatch(setLogin(res.data.content));
@@ -82,4 +89,5 @@ const FormLogin = () => {
     </Form>
   );
 };
+
 export default FormLogin;

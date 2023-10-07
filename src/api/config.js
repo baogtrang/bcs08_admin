@@ -8,10 +8,13 @@ export const configHeaders = () => {
   };
 };
 export const BASE_URL = "https://movienew.cybersoft.edu.vn/api";
-// axios instance
+
+// axios instance: https://axios-http.com/docs/instance
 export const https = axios.create({
   baseURL: BASE_URL,
   headers: {
     TokenCybersoft: TOKEN_CYBER,
   },
 });
+// Every request made using https will automatically have the base URL and the required headers.
+// It centralizes the API configuration, making it easier to manage and change if needed.
