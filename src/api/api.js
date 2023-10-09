@@ -14,7 +14,7 @@ export let userServ = {
   getList: () => { 
     return https.get("/QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=GP00"); 
   },
-  delete: (taiKhoan) => https.delete(`QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${taiKhoan}`),
+  delete: (taiKhoan) => https.delete(`/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${taiKhoan}`),
   
 
 };
