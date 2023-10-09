@@ -14,6 +14,8 @@ export const https = axios.create({
   baseURL: BASE_URL,
   headers: {
     TokenCybersoft: TOKEN_CYBER,
+    Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+
   },
 });
 // Every request made using https will automatically have the base URL and the required headers.

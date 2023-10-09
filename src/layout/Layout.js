@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import { Outlet } from "react-router-dom";
+
 const { Header, Content, Sider } = Layout;
 const items1 = ["1", "2", "3"].map((key) => ({
   key,
@@ -51,6 +52,7 @@ const HomeLayout = () => {
           Log in
         </button>
       </Header>
+
       <Layout>
         <Sider
           theme="dark"
@@ -76,6 +78,7 @@ const HomeLayout = () => {
             items={items2}
           />
         </Sider>
+        
         <Layout
           className="site-layout"
           style={{

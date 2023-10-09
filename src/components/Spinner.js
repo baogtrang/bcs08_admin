@@ -1,5 +1,5 @@
 import React from "react";
-import { PacmanLoader } from "react-spinners";
+import { ScaleLoader } from "react-spinners";
 
 export default function Spinner() {
   return (
@@ -11,9 +11,13 @@ export default function Spinner() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 100,
       }}
     >
-      <PacmanLoader color="#36d7b7" speedMultiplier={3} />
+      <ScaleLoader height={80} width={20} color="#36d7b7" speedMultiplier={2}/>
     </div>
   );
 }
