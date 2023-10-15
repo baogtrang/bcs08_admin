@@ -6,10 +6,13 @@ import MoviePage from "./page/MoviePage/MoviePage";
 import HomeLayout from "./layout/Layout";
 import FormLogin from "./page/Login/Login";
 import PrivateRoute from "./layout/PrivateRoute";
+import Spinner from "./components/Spinner";
+import PageNotFound from "./page/PageNotFound/PageNotFound";
 
 function App() {
   return (
     <div>
+      <Spinner />
       <BrowserRouter>
         <Routes>
           <Route
@@ -25,6 +28,7 @@ function App() {
             <Route path="/movie" element={<MoviePage />} />
           </Route>
           <Route path="/login" element={<FormLogin />} />
+          <Route path="*" element={<PageNotFound/>}  />
         </Routes>
       </BrowserRouter>
     </div>

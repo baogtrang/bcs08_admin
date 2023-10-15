@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import { Outlet } from "react-router-dom";
+import BreadCrumbNav from "../components/BreadCrumbNav";
 
 const { Header, Content, Sider } = Layout;
 const items1 = ["1", "2", "3"].map((key) => ({
@@ -85,15 +86,8 @@ const HomeLayout = () => {
             marginLeft: 200,
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: "16px 0",
-            }}
-          >
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>HomeLayout</Breadcrumb.Item>
-          </Breadcrumb>
+        
+          <BreadCrumbNav />
           <Content
             style={{
               padding: 24,

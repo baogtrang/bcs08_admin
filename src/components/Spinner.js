@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { ScaleLoader } from "react-spinners";
 
 export default function Spinner() {
-  return (
+  let {isLoading} = useSelector((state)=>state.spinnerSlice)
+  return isLoading? (
     <div
       style={{
         width: "100vw",
@@ -19,6 +21,6 @@ export default function Spinner() {
     >
       <ScaleLoader height={80} width={20} color="#36d7b7" speedMultiplier={2}/>
     </div>
-  );
+  ) : <></>
 }
 // react spinner npm
